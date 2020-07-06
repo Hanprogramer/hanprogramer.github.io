@@ -33,9 +33,9 @@ var playersData = {
       "name": "Player 29243",
       "dimensionId": 0,
       "position": [
-        36.185513,
+        41,
         70.62001,
-        7.8201084
+        -9
       ],
       "color": "Purple",
       "visible": true
