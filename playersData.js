@@ -30,7 +30,7 @@ var playersData = {
     },
     {
       "uuid": "292439b2-360a-4311-a88d-67c88f2690ec",
-      "name": "Player 29243",
+      "name": "Spawn Island",
       "dimensionId": 0,
       "position": [
         41,
