@@ -7,5 +7,9 @@
         <!-- Body -->
         <br>
         <a>Finished Loading</a>
+        <script>var load_event = document.createEvent("HTMLEvents");
+            load_event.initEvent("load", true, true);
+            window.document.dispatchEvent(load_event);
+        </script>
     </body>
 </html>
