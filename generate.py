@@ -117,6 +117,7 @@ footer = """<script async src="https://pagead2.googlesyndication.com/pagead/js/a
     </body>
 </html>"""
 f = open("index.html", "w")
+# Generator
 for line in content:
     raw = line.strip()
     if(raw == "<div class=\"GENERATED\"></div>"):
