@@ -175,6 +175,7 @@ body {
     flex-wrap: nowrap;
 }
 
+/* Download buttons */
 .downloadbtn {
     margin: 16px;
     background-color: rgb(20, 204, 45);
@@ -189,7 +190,6 @@ body {
 }
 
 
-/* Download buttons */
 .downloadbtn::after{
     content:'';
     background:url('http://mcpedl.com/wp-content/uploads/2014/04/dllogonew.png'); /* with class ModalCarrot ??*/
