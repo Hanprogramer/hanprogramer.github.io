@@ -180,6 +180,8 @@ body {
     transition: background-color .1s;
 }
 
+
+/* Download buttons */
 .downloadbtn:hover{
     background-color: rgb(31, 248, 60);
 }
