@@ -48,6 +48,7 @@ body {
     height: 48px;
     max-width: 96px;
     transition: background-color .1s, border-bottom .1s ease-in;
+    margin-right: 4px;
 }
 .navbar button:hover {
     background-color:rgb(182, 38, 38);
@@ -195,7 +196,6 @@ body {
     height: 48px;
     width: 48px;
     background-size: 48px 60px;
-    z-index: 100000;
     position: relative;
     top: -48px;
     display:block;
@@ -215,7 +215,6 @@ body {
   height: 48px;
   width: 48px;
   background-size: 48px 48px;
-  z-index: 100000;
   position: relative;
   top: -48px;
   display:block;
