@@ -18,6 +18,16 @@ for i in os.listdir("posts"):
 header = """<!DOCTYPE html>
 <html>
     <head>
+        <meta property="og:title" content="Hanprogramer's Website" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://hanprogramer.github.io" />
+        <meta property="og:image" content="https://hanprogramer.github.io/banner.png" />
+        <meta property="og:description" content="Come check out my stuffs :3" />
+        <meta name="theme-color" content="#FF0000">
+
+        <!-- Include this to make the og:image larger -->
+        <meta name="twitter:card" content="summary_large_image">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../../../index.css">
@@ -49,6 +59,16 @@ header = """<!DOCTYPE html>
 header_root = """<!DOCTYPE html>
 <html>
     <head>
+        <meta property="og:title" content="Hanprogramer's Website" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://hanprogramer.github.io" />
+        <meta property="og:image" content="https://hanprogramer.github.io/banner.png" />
+        <meta property="og:description" content="Come check out my stuffs :3" />
+        <meta name="theme-color" content="#FF0000">
+
+        <!-- Include this to make the og:image larger -->
+        <meta name="twitter:card" content="summary_large_image">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
