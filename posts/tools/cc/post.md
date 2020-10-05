@@ -107,5 +107,4 @@ The free version will come per next update.
 Notes if the app won't open, please make the folder not "Read only" (right click on the installation folder, then uncheck the box. Or try running the program as administrator  
 
 <iframe src="https://discordapp.com/widget?id=567694190901985300&amp;theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-
-<a class="downloadbtnItch" href="https://mcpedl.com/among-us-map-builder/" target="_blank">Download via Itch.io</a>
+<a class="downloadbtnItch" href="https://hanprog.itch.io/core-coder" target="_blank">Download via Itch.io</a>
