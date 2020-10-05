@@ -88,7 +88,7 @@ Open the downloaded file
 
 ### Downloads
 
-*   [**Among Us Map Template.mcworld**](https://mcpedl.com/leaving?url=https%3A%2F%2Flink-to.net%2F147407%2Famongusmapbuilder2b&post_id=159575)
+<a class="downloadbtn" href="https://mcpedl.com/among-us-map-builder/" target="_blank">Download via MCPEDL</a>
 
 ### Supported Minecraft versions
 

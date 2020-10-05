@@ -10,8 +10,9 @@ content = f.readlines()
 f.close()
 
 # List all available posts
-TOOLS = os.listdir("posts/tools")
-ADDONS = os.listdir("posts/addons")
+POSTS = {}
+for i in os.listdir("posts"):
+    POSTS[i] = os.listdir("posts/%s" % i)
 
 # Template header for all files
 header = """<!DOCTYPE html>
@@ -30,6 +31,7 @@ header = """<!DOCTYPE html>
         <script>
             CSS.paintWorklet.addModule('../../../bubblePaint.js')
         </script>
+        
         <div class="navbar">
             <img class="round-icon" src="../../../favicon.ico">
             <div class="titletext">
@@ -41,6 +43,7 @@ header = """<!DOCTYPE html>
             <button class="button" onclick="window.location = '../../../addons.html'">Addons</a>
         </div>
 
+        <div class="maindivider" style="position: relative">
         <div class="content">"""
 header_root = """<!DOCTYPE html>
 <html>
@@ -68,75 +71,62 @@ header_root = """<!DOCTYPE html>
             <button class="button" onclick="window.location = './tools.html'">Tools</a>
             <button class="button" onclick="window.location = './addons.html'">Addons</a>
         </div>
+        
+        <div class="maindivider" style="position: relative">
         <div class="content">
         %s
         <div class="post-container">"""
-footer = """        </div>
+footer = """<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- github.io -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9638544368327690"
+             data-ad-slot="9490828740"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        
+                <div class="tweets">
+                        <a class="twitter-timeline" data-height="512" data-dnt="true" data-theme="dark" href="https://twitter.com/Hanprogramer123?ref_src=twsrc%5Etfw">Tweets by Hanprogramer123</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div></div></div>
     </body>
 </html>"""
 f = open("index.html", "w")
 for line in content:
     raw = line.strip()
     if(raw == "<div class=\"GENERATED\"></div>"):
-        #########################################
-        #      TOOLS CONTENT GENERATOR
-        #########################################
-        f.write("<h1>Tools</h1>")
-        f.write('<div class="post-container">')
-        f_tool = open("tools.html", "w")
-        f_tool.write(header_root % ("<h1>Tools</h1>"))
-        for tool in TOOLS:
-            if(not os.path.exists("posts/tools/%s/post.md" % tool)):
-                continue
-            # Genereate the posts
-            template = """
-                        <a class="post" href="posts/tools/%s/post.html">
-                            <img src="posts/tools/%s/thumb.png">
-                        </a>\n""" % (tool, tool)
-            f.write(template)
-            f_tool.write(template)
+        for key in POSTS.keys():
+            #########################################
+            #      POSTS CONTENT GENERATOR
+            #########################################
+            f.write("<h1>%s</h1>" % key.title())
+            f.write('<div class="post-container">')
+            f_category = open("%s.html" % key, "w")
+            f_category.write(header_root % ("<h1>%s</h1>" % key.title()))
+            for post in POSTS[key]:
+                if(not os.path.exists("posts/%s/%s/post.md" % (key,post))):
+                    continue
+                # Genereate the posts
+                template = """
+                            <a class="post" href="posts/%s/%s/post.html">
+                                <img src="posts/%s/%s/thumb.png">
+                            </a>\n""" % (key, post, key, post)
+                f.write(template)
+                f_category.write(template)
 
-            # Generate the individual post html
-            html = header
-            html += (markdown2.markdown_path("posts/tools/%s/post.md" % tool))
-            html += footer
+                # Generate the individual post html
+                html = header
+                html += (markdown2.markdown_path("posts/%s/%s/post.md" %(key, post)))
+                html += footer
 
-            post = open("posts/tools/%s/post.html" % tool, "w")
-            post.write(html)
-            post.close()
-        f.write('</div>')
-        f_tool.write(footer)
-        f_tool.close()
-        
-        #########################################
-        #      ADDONS CONTENT GENERATOR
-        #########################################
-        f.write("<h1>Addons</h1>")
-        f.write('<div class="post-container">')
-        f_tool = open("addons.html", "w")
-        f_tool.write(header_root % ("<h1>Addons</h1>"))
-        for tool in ADDONS:
-            if(not os.path.exists("posts/addons/%s/post.md" % tool)):
-                continue
-            # Genereate the posts
-            template = """
-                        <a class="post" href="posts/addons/%s/post.html">
-                            <img src="posts/addons/%s/thumb.png">
-                        </a>\n""" % (tool, tool)
-            f.write(template)
-            f_tool.write(template)
-
-            # Generate the individual post html
-            html = header
-            html += (markdown2.markdown_path("posts/addons/%s/post.md" % tool))
-            html += footer
-
-            post = open("posts/addons/%s/post.html" % tool, "w")
-            post.write(html)
-            post.close()
-        f.write('</div>')
-        f_tool.write(footer)
-        f_tool.close()
+                f_post = open("posts/%s/%s/post.html" % (key,post), "w")
+                f_post.write(html)
+                f_post.close()
+            f.write('</div>')
+            f_category.write(footer)
+            f_category.close()
         continue
     f.write(line)
 f.close()
