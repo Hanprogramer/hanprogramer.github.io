@@ -4,5 +4,4 @@ It can also merge packs together to a single click installation file (.mcpack)
 
 ![](ss1.png) 
 
-<a class="downloadbtnItch" href="https://hanprog.itch.io/core-coder" target="_blank">Download via Itch.io</a>
 <a class="downloadBtnReg" href="https://link-to.net/147407/mcpacker" target="_blank">Download via Linkvertise</a>
