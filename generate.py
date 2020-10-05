@@ -43,6 +43,7 @@ header = """<!DOCTYPE html>
             <button class="button" onclick="window.location = '../../../addons.html'">Addons</a>
         </div>
 
+        <div style="margin-bottom: 56px"></div>
         <div class="maindivider" style="position: relative">
         <div class="content">"""
 header_root = """<!DOCTYPE html>
@@ -61,6 +62,7 @@ header_root = """<!DOCTYPE html>
         <script>
             CSS.paintWorklet.addModule('bubblePaint.js')
         </script>
+        
         <div class="navbar">
             <img class="round-icon" src="favicon.ico">
             <div class="titletext">
@@ -71,6 +73,7 @@ header_root = """<!DOCTYPE html>
             <button class="button" onclick="window.location = './tools.html'">Tools</a>
             <button class="button" onclick="window.location = './addons.html'">Addons</a>
         </div>
+        <div style="margin-bottom: 56px"></div>
         
         <div class="maindivider" style="position: relative">
         <div class="content">
