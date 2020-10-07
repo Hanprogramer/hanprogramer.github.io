@@ -27,16 +27,40 @@
             CSS.paintWorklet.addModule('./bubblePaint.js')
         </script>
         <div class="navbar">
-            <img class="round-icon" src="favicon.ico">
-            <div class="titletext">
-                <a href="./index.html">HANPROGRAMER</a>
-                <!-- <a href="https://youtube.com/Hanprogramer" target="_blank" class="subtitle">youtube.com/Hanprogramer</a> -->
-            </div>
-            <div style="flex-grow: 1"></div>
-            <button class="button" onclick="window.location = './tools.html'">Tools</a>
-            <button class="button" onclick="window.location = './addons.html'">Addons</a>
+            <a href="index.html"><img src="images/logo-white.png"></a>
         </div>
-        <div style="margin-bottom: 48px"></div>
+        <div class="subnavbar">
+            <a href="index.html">Home</a>
+            <a href="downloads.html">Downloads</a>
+            <a href="apply.html">Apply</a>
+            <a href="wiki.html">Wiki</a>
+            <a href="contact.html">Contact Us</a>
+            <a id="asldkfjhasdfoi" class="closebutton" onclick="collapsePanel(this)">X</a>
+        </div>
+        <script>
+            function collapsePanel(self){
+                if(self.innerText == "X"){
+                    // Close the panel
+                    self.innerText = "...";
+                    var elm = document.querySelectorAll(".subnavbar>a:not(.closebutton)");
+                    for(var i in elm){
+                        elm[i].style.display = "none";
+                    }
+                }else{
+                    // Open the panel
+                    self.innerText = "X";
+                    var elm = document.querySelectorAll(".subnavbar>a:not(.closebutton)");
+                    for(var i in elm){
+                        elm[i].style.display = "block";
+                    }
+                }
+            }
+            // Auto hide the menubar on mobile
+            if(window.screen.width < 720){
+                collapsePanel(document.getElementById("asldkfjhasdfoi"));
+            }
+        </script>
+        <div class="separator"></div>
         <img src="banner.png" style="max-width: 100%;">
         <div class="maindivider" style="position: relative">
             <div class="content">
