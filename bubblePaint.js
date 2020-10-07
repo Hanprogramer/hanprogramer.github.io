@@ -18,6 +18,6 @@ registerPaint('randomBackground', class {
     return arr[Math.floor(Math.random() * arr.length)]; 
   }  
   function getPseudoRandomHexColor(index) {
-    var arr = ["rgb(14, 14, 14)","rgb(20, 20, 20)", "rgb(24, 24, 24)"];
+    var arr = ["rgb(129, 19, 19)","rgb(180, 23, 23)", "rgb(158, 23, 23)"];
   return arr[index % arr.length]; 
     }

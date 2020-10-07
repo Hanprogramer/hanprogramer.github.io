@@ -11,20 +11,27 @@ html {
 }
 
 body {
-    background-color: rgb(32, 32, 32);
+    background-color: #06050f;
     background-size: 100% 100%;
-    background-image: paint(randomBackground);
+    /* background-image: paint(randomBackground); */
     background-repeat: round;
     margin: 0;
 }
-
+.nodecor{
+    text-decoration: none;
+}
 .round-icon {
     max-width: 40px;
     max-height: 40px;
     padding: 4px;
-    border-radius: 48px;
-    background-color:rgb(129, 19, 19);
-    
+    background-color: rgb(211, 208, 208);
+    border-radius: 4px;
+    transition: all .2s;
+    height: 40px;
+    width: 40px;
+}
+.round-icon:hover {
+    background-color: rgb(238, 42, 42);
 }
 
 .navbar {
@@ -38,6 +45,20 @@ body {
     flex-wrap: wrap;
     position: fixed;
     top: 0;
+}
+.logo {
+    padding-top: 256px;
+    height: 512px;
+    width: 100%;
+    background-image: url("./images/download-withgradient.png");
+    background-repeat: no-repeat;
+}
+
+.logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .closebutton{
@@ -58,13 +79,16 @@ body {
     background-color: rgb(88, 88, 88);
 }
 .separator{
-    margin-bottom: 96px;
+    margin-bottom: 104px;
+}
+.content {
+    max-width: 100%;
 }
 /* For Mobile */
 @media screen and (max-width: 720px) {
-    .content {
+    /* .content {
         max-width: 100%;
-    }
+    } */
     .tweets {
         max-width: 100%;
         max-height: 256px;
@@ -94,9 +118,9 @@ body {
 
 /* For Tablets and PC*/
 @media screen and (min-width: 720px){
-    .content {
+    /* .content {
         max-width: 65%;
-    }
+    } */
     .tweets {
         /* max-width: 30%; */
         overflow:auto;
@@ -120,7 +144,9 @@ body {
         position: fixed;
         top: 64px;
     }
-    
+    .closebutton{
+        display:none;
+    }
 }
 .navbar img {
     padding: 8px;
@@ -329,3 +355,14 @@ body {
 .downloadBtnReg:active{
     background-color: rgb(11, 119, 138);
 }
+
+.footer .container .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 16px;
+}
+.footer .container .col-md-4{
+    flex-grow:1;
+}
+
