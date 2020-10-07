@@ -3,8 +3,8 @@
     --var_bgcol1: rgb(14, 14, 14);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
-h1 {
-    font-family: 'Oswald';
+h1, h2, h3, h4 {
+    font-family: 'Noto Sans', sans-serif;
 }
 html {
     height: 100%;
@@ -206,7 +206,7 @@ body {
 }
 .content {
     margin: 16px;
-    padding: 8px;
+    padding: 32px;
     background-color: rgba(26, 26, 26, 0.432);
     border: 2px solid rgba(51, 51, 51, 0.253);
     box-sizing: border-box;
@@ -216,11 +216,12 @@ body {
     width: 100%;
 }
 /* Create two equal columns that floats next to each other */
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-  }
+.columncontainer {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 32px;
+}
   
 /* Clear floats after the columns */
 .row:after {
