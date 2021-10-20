@@ -148,6 +148,7 @@ h2 {
     top: 16px;
     user-select: none;
     -webkit-user-drag: none;
+    image-rendering: pixelated;
 }
 .homepage-grid .item h1{
     font-size: small;
