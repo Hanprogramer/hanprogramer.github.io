@@ -128,4 +128,47 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 128px;
+}
+
+.flex-if-mobile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+  .flex-if-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-if-mobile > .myheader.header-clickable {
+    width: 640px;
+  }
+
+  .myheader a {
+    font-size: 64pt;
+  }
+}
+/* Mobile */
+@media only screen and (max-width: 999px) {
+  .flex-if-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .content {
+    padding: 32px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .myheader a {
+    font-size: 64pt;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -27,7 +27,7 @@
     background-color: rgb(16, 16, 17);
 }
 
-.myheader.title-header{
+.myheader.title-header {
     background: rgb(69, 0, 0);
     background: linear-gradient(
         152deg,
@@ -39,16 +39,15 @@
         rgba(0, 68, 82, 1) 100%
     );
 }
-.myheader.header-clickable{
+.myheader.header-clickable {
     cursor: pointer;
-    transition: all .1s ease-in;
+    transition: all 0.1s ease-in;
     background-position: center;
     transition: background-size 1s ease-in-out;
     outline: 2px solid transparent;
-    
     background-size: 100%;
 }
-.myheader.header-clickable:hover{
+.myheader.header-clickable:hover {
     outline: 3px solid rgb(172, 172, 172);
     background-size: 200%;
 }
@@ -100,7 +99,6 @@
     box-shadow: 0px 4px 8px black;
 }
 
-
 .pict-gallery {
     display: flex;
     flex-direction: row;
@@ -136,4 +134,43 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 128px;
+}
+
+.flex-if-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+/* Desktop */
+@media only screen and (min-width: 1000px) {
+    .flex-if-mobile {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex-if-mobile > .myheader.header-clickable {
+        width: 640px;
+    }
+    .myheader a {
+        font-size: 64pt;
+    }
+}
+/* Mobile */
+@media only screen and (max-width: 999px) {
+    .flex-if-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .content {
+        padding: 32px;
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+    .myheader a {
+        font-size: 64pt;
+    }
 }
