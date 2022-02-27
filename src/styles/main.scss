@@ -1,0 +1,139 @@
+//@import 'particles.scss';
+* {
+    font-family: "Nunito", sans-serif;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 20pt;
+}
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: rgb(27, 27, 27);
+    line-height: 60px;
+    height: 60px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-size: larger;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.137);
+}
+
+.myheader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+    background-color: rgb(16, 16, 17);
+}
+
+.myheader.title-header{
+    background: rgb(69, 0, 0);
+    background: linear-gradient(
+        152deg,
+        rgba(69, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 34%,
+        rgba(0, 0, 0, 1) 52%,
+        rgba(2, 21, 24, 1) 70%,
+        rgba(2, 27, 32, 1) 74%,
+        rgba(0, 68, 82, 1) 100%
+    );
+}
+.myheader.header-clickable{
+    cursor: pointer;
+    transition: all .1s ease-in;
+    background-position: center;
+    transition: background-size 1s ease-in-out;
+    outline: 2px solid transparent;
+    
+    background-size: 100%;
+}
+.myheader.header-clickable:hover{
+    outline: 3px solid rgb(172, 172, 172);
+    background-size: 200%;
+}
+
+.myheader a {
+    font-size: 72pt;
+}
+
+.myheader.header-clickable a {
+    text-shadow: 0 4px 16px black;
+    background-color: rgba(0, 0, 0, 0.836);
+}
+
+.myheader sub {
+    font-size: 24px;
+    color: rgb(255, 251, 43);
+}
+.myheader.header-clickable sub {
+    background-color: rgba(0, 0, 0, 0.836);
+    text-shadow: 0 4px 16px black;
+    padding-bottom: 16px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding: 32px;
+    margin: 32px;
+    border-radius: 32px;
+    border: 1px solid rgb(143, 143, 143);
+    background-color: rgb(16, 16, 17);
+    box-shadow: 0px 4px 8px rgba(15, 15, 15, 0.938);
+}
+
+.profile a {
+    font-size: 40pt;
+}
+
+.profile sub {
+    font-size: 24px;
+    color: rgb(168, 168, 168);
+}
+
+.profile img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+    box-shadow: 0px 4px 8px black;
+}
+
+
+.pict-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.pict-gallery img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+.content {
+    padding: 32px;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    & {
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+.banner {
+    background-color: red;
+    background: url("../../assets/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 128px;
+}
